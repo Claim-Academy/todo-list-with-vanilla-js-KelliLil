@@ -15,3 +15,6 @@ function createIdCard(user) {
     </section>
         `;
 }
+
+const allIdCard = toDos.map(createIdCard).join(" ");
+
