@@ -18,3 +18,4 @@ function createIdCard(user) {
 
 const allIdCard = toDos.map(createIdCard).join(" ");
 
+root.innerHTML = allIdCard
