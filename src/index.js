@@ -8,16 +8,17 @@ console.log(toDos);
 
 function createIdCard(user) {
     return `
-    <section>
-        <h2> UserID: ${user.userId} </h2>
-        <ul>
-            <li> ID Number: ${user.id}<li>
-            <li> Title of User: ${user.title}<li>
-            <li> Task Completed: ${user.completed}<li>
-        </ul>
-    </section>
-        `;
+    <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-9 ">
+    <h2> UserID: ${user.userId} </h2>
+    <ul>
+        <li> ID Number: ${user.id}<li>
+        <li> Title of User: ${user.title}<li>
+        <li> Task Completes: ${user.completed}<li>
+    </ul>
+</section>
+`;
 }
+
 
 const allIdCard = toDos.map(createIdCard).join(" ");
 
