@@ -40,3 +40,6 @@ ${allIdCard}
  const search = document.querySelector("input")
 search.addEventListener("keydown" , (event) => {
 letters += event.key;
+const filterId = filterByComplete (people,letters)
+
+console.log(filterId)
