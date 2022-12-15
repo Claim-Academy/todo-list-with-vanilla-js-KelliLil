@@ -17,7 +17,16 @@ function createIdCard(user) {
 `;
 }
 
+root.classList.add("flex", "flex-col", "gap-y-8", "items-center")
+
 
 const allIdCard = toDos.map(createIdCard).join(" ");
 
- root.innerHTML = allIdCard
+ root.innerHTML = `
+ <div class="shadow-lg p-1 mx-auto">
+    <label for="search" class="sr-only">Search</label>
+    <input type="search" id="search" placeholder="Search" />
+ </div>
+ <main class = "items-center grid grid-cols-4 gap-2">
+${allIdCard}
+ </main>`
