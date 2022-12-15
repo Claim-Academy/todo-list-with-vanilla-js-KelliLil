@@ -32,9 +32,9 @@ const allIdCard = toDos.map(createIdCard).join(" ");
 ${allIdCard}
  </main>`
 
- function filterByComplete(idList, searchComplete) {
-    searchComplete = Boolean
-    return searchComplete.filter((task) => task.completed.includes(idList))
+ function filterByComplete(idList) {
+
+    return allIdCard.filter((task) => task.completed.includes(idList))
  }
 
  const search = document.querySelector("input")
