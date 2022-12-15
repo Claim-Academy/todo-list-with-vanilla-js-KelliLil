@@ -1,10 +1,8 @@
 const root = document.querySelector("#root");
 
-const todo =await fetch("https://jsonplaceholder.typicode.com/todos");
+const resp =await fetch("https://jsonplaceholder.typicode.com/todos");
 
-const toDos = await todo.json();
-
-console.log(toDos);
+const toDos = await resp.json();
 
 function createIdCard(user) {
     return `
@@ -22,4 +20,4 @@ function createIdCard(user) {
 
 const allIdCard = toDos.map(createIdCard).join(" ");
 
-root.innerHTML = allIdCard
+ root.innerHTML = allIdCard
