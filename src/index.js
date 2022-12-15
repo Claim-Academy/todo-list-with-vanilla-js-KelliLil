@@ -34,3 +34,5 @@ ${allIdCard}
  function filterByComplete(idList, searchComplete) {
     return idList.filter((task) => task.completed.includes(searchComplete))
  }
+
+ const search = document.querySelector("input")
