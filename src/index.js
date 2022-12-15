@@ -30,3 +30,7 @@ const allIdCard = toDos.map(createIdCard).join(" ");
  <main class = "items-center grid grid-cols-4 gap-2">
 ${allIdCard}
  </main>`
+
+ function filterByComplete(idList, searchComplete) {
+    return idList.filter((task) => task.completed.includes(searchComplete))
+ }
