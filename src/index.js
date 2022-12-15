@@ -2,10 +2,6 @@ const root = document.querySelector("#root");
 
 let letters = "";
 
-const resp =await fetch("https://jsonplaceholder.typicode.com/todos");
-
-const toDos = await resp.json();
-
 function createIdCard(user) {
     return `
     <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-9 ">
@@ -18,6 +14,9 @@ function createIdCard(user) {
 </section>
 `;
 }
+const resp =await fetch("https://jsonplaceholder.typicode.com/todos");
+
+const toDos = await resp.json();
 
 root.classList.add("flex", "flex-col", "gap-y-8", "items-center")
 
@@ -34,12 +33,16 @@ ${allIdCard}
  </main>`
 
  function filterByComplete(idList, searchComplete) {
-    return idList.filter((task) => task.completed.includes(searchComplete))
+    searchComplete = Boolean
+    return searchComplete.filter((task) => task.completed.includes(idList))
  }
 
  const search = document.querySelector("input")
+
 search.addEventListener("keydown" , (event) => {
 letters += event.key;
-const filterId = filterByComplete (people,letters)
+const filterId = filterByComplete(letters)
 
 console.log(filterId)
+});
+
