@@ -1,5 +1,7 @@
 const root = document.querySelector("#root");
 
+let letters = "";
+
 const resp =await fetch("https://jsonplaceholder.typicode.com/todos");
 
 const toDos = await resp.json();
