@@ -38,3 +38,5 @@ ${allIdCard}
  }
 
  const search = document.querySelector("input")
+search.addEventListener("keydown" , (event) => {
+letters += event.key;
